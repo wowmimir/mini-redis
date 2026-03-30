@@ -1,0 +1,6 @@
+build/
+*.o
+*.out
+*.log
+appendonly.aof
+temp.aof
