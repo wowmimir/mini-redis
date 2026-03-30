@@ -95,12 +95,24 @@ cd mini-redis
 
 ---
 
+### ⚙️ Requirements
+
+* Linux environment (required for `epoll`)
+* `g++` (C++17)
+* `make`
+
+---
+
 ### 🛠️ Build the Project
 
-Make sure you have a C++ compiler installed (g++ or clang).
-
 ```bash
-g++ -std=c++17 -O2 -Wall -o server src/**/*.cpp
+make
+```
+
+This compiles all source files and generates the executable:
+
+```text
+runredis
 ```
 
 ---
@@ -108,7 +120,7 @@ g++ -std=c++17 -O2 -Wall -o server src/**/*.cpp
 ### ▶️ Run the Server
 
 ```bash
-./server
+./runredis
 ```
 
 The server will start listening on:
@@ -153,11 +165,15 @@ $2
 #### Option 3: Using the Provided Node.js Client
 
 ```bash
-node run client/client.js
+node client/client.js
 ```
-```with npm
+
+Or:
+
+```bash
 npm run client
 ```
+
 Then enter:
 
 ```text
@@ -189,6 +205,7 @@ Then restart the server.
 * Server is single-threaded
 * AOF rewrite is currently blocking
 * Designed for learning, not production use
+
 
 
 ## 🧠 Design Highlights
