@@ -4,3 +4,4 @@ build/
 *.log
 appendonly.aof
 temp.aof
+runredis
