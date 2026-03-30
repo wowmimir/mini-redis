@@ -1,4 +1,4 @@
-# 🚀 mini-redis : Redis-Inspired In-Memory Database (C++)
+# 🚀 mini-redis : A Redis-Inspired In-Memory Database (C++)
 
 A high-performance, event-driven in-memory database server built from scratch in C++, inspired by Redis.
 
