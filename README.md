@@ -84,36 +84,61 @@ src/
 
 ---
 
-## ⚙️ Build & Run
+## 🚀 Getting Started
 
-### Build
+### 📥 Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/redis-like-db.git
+cd redis-like-db
+```
+
+---
+
+### 🛠️ Build the Project
+
+Make sure you have a C++ compiler installed (g++ or clang).
 
 ```bash
 g++ -std=c++17 -O2 -Wall -o server src/**/*.cpp
 ```
 
-### Run
+---
+
+### ▶️ Run the Server
 
 ```bash
 ./server
 ```
 
-Server listens on port `8000`.
+The server will start listening on:
+
+```text
+localhost:8000
+```
 
 ---
 
-## 🧪 Example Usage
+### 🧪 Test the Server
 
-Using netcat or a custom client:
+#### Option 1: Using Netcat
 
+```bash
+nc localhost 8000
 ```
+
+Then type:
+
+```text
 SET x 10
 GET x
 ```
 
-RESP request:
+---
 
-```
+#### Option 2: Using RESP Format (Recommended)
+
+```text
 *3
 $3
 SET
@@ -124,6 +149,45 @@ $2
 ```
 
 ---
+
+#### Option 3: Using the Provided Node.js Client
+
+```bash
+node client.js
+```
+
+Then enter:
+
+```text
+SET x 42; GET x
+```
+
+---
+
+### 💾 Persistence
+
+* Data is stored in `appendonly.aof`
+* Automatically loaded on server startup
+* Do not delete this file if you want to retain data
+
+---
+
+### 🧹 Reset Database
+
+```bash
+rm appendonly.aof
+```
+
+Then restart the server.
+
+---
+
+### ⚠️ Notes
+
+* Server is single-threaded
+* AOF rewrite is currently blocking
+* Designed for learning, not production use
+
 
 ## 🧠 Design Highlights
 
