@@ -5,3 +5,4 @@ build/
 appendonly.aof
 temp.aof
 runredis
+Makefile
