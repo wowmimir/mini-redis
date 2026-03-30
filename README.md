@@ -89,8 +89,8 @@ src/
 ### 📥 Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/redis-like-db.git
-cd redis-like-db
+git clone https://github.com/<your-username>/mini-redis.git
+cd mini-redis
 ```
 
 ---
@@ -153,9 +153,11 @@ $2
 #### Option 3: Using the Provided Node.js Client
 
 ```bash
-node client.js
+node run client/client.js
 ```
-
+```with npm
+npm run client
+```
 Then enter:
 
 ```text
